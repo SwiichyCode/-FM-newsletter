@@ -1,0 +1,107 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #36384d;
+}
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 928px;
+  box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.25);
+  border-radius: 36px;
+  background: #fff;
+  margin: 2rem;
+  padding: 24px;
+}
+.form__left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 376px;
+  margin: auto;
+  color: #242742;
+}
+.form__header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.form__header-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 100%;
+}
+.form__header-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+.form__header-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__header-list-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+.form__header-list-item p {
+  padding-top: 2px;
+}
+.form__header-list img {
+  width: 21px;
+  height: 21px;
+}
+.form__email {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.form__email-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form__email-label {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+}
+.form__email-input {
+  height: 56px;
+  border: 1px solid rgba(25, 24, 43, 0.25);
+  border-radius: 8px;
+  padding: 0 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #242742;
+}
+.form__email-input::placeholder {
+  color: #242742;
+  opacity: 0.5;
+}
+.form__email-button {
+  height: 56px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  background: #242742;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.form__email-button:hover {
+  background: linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
+  box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
+}
