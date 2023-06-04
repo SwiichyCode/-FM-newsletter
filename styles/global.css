@@ -8,6 +8,7 @@
 }
 .form {
   display: flex;
+  flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: space-between;
   width: 928px;
@@ -17,6 +18,11 @@
   margin: 2rem;
   padding: 24px;
 }
+@media (max-width: 884px) {
+  .form {
+    justify-content: center;
+  }
+}
 .form__left {
   display: flex;
   flex-direction: column;
@@ -24,6 +30,19 @@
   width: 376px;
   margin: auto;
   color: #242742;
+}
+.form__right {
+  width: 400px;
+  height: 500px;
+  background-image: url("../assets/images/illustration-sign-up-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center right;
+}
+@media (max-width: 884px) {
+  .form__right {
+    background-image: url("../assets/images/illustration-sign-up-mobile.svg");
+  }
 }
 .form__header {
   display: flex;
@@ -75,6 +94,17 @@
   font-size: 12px;
   line-height: 150%;
 }
+.form__email-group-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.error-message {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  color: #ff6155;
+}
 .form__email-input {
   height: 56px;
   border: 1px solid rgba(25, 24, 43, 0.25);
@@ -84,6 +114,12 @@
   font-size: 16px;
   line-height: 150%;
   color: #242742;
+  /* transition: all 0.3s ease-in-out; */
+}
+.form__email-input.error {
+  border: 1px solid #ff6155 !important;
+  background: rgba(255, 97, 85, 0.15) !important;
+  transition: all 0.3s ease-in-out;
 }
 .form__email-input::placeholder {
   color: #242742;
@@ -104,4 +140,38 @@
 .form__email-button:hover {
   background: linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
   box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
+}
+.success-form {
+  display: none;
+  flex-direction: column;
+  width: 504px;
+  height: 520px;
+  gap: 40px;
+  background: #ffffff;
+  box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.25);
+  border-radius: 36px;
+  padding: 48px 64px;
+  color: #242742;
+}
+.success-form img {
+  width: 64px;
+  height: 64px;
+}
+.sucess-form__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#emailAddressReception {
+  text-decoration: underline;
+}
+.success-form h2 {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 100%;
+}
+.success-form p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
 }

@@ -19,7 +19,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="form">
+      <div class="form" id="form">
         <!-- Sign-up form start -->
         <div class="form__left">
           <div class="form__header">
@@ -44,7 +44,12 @@
           </div>
           <form class="form__email">
             <div class="form__email-group">
-              <label for="email" class="form__email-label">Email Address</label>
+              <div class="form__email-group-label">
+                <label for="email" class="form__email-label"
+                  >Email Address</label
+                >
+                <span class="error-message" id="errorMessage"></span>
+              </div>
               <input
                 type="email"
                 id="email"
@@ -53,21 +58,31 @@
                 placeholder="email@company.com"
               />
             </div>
-            <button class="form__email-button">
+            <button class="form__email-button" id="email-btn">
               Subscribe to monthly newsletter
             </button>
           </form>
         </div>
         <div class="form__right">
-          <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
+          <!-- <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" /> -->
         </div>
-
-        <!-- Sign-up form end -->
-
-        <!-- Success message start -->
-
-        <!-- Success message end -->
+      </div>
+      <!-- Sign-up form end -->
+      <div class="success-form" id="success-form">
+        <img src="./assets/images/icon-success.svg" alt="" />
+        <div class="sucess-form__content">
+          <h2>Thanks for subscribing!</h2>
+          <p>
+            A confirmation email has been sent to
+            <span id="emailAddressReception"></span>. Please open it and click
+            the button inside to confirm your subscription.
+          </p>
+        </div>
+        <button class="form__email-button" id="dismissMessageBtn">
+          Dismiss message
+        </button>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
